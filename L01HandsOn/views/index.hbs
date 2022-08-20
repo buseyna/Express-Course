@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<p>Welcome to a list of {{title}}</p>
+<table>
+    <tr>
+        <th>City</th>
+         <th>State</th>
+          <th>Population</th>
+    </tr>
+  {{#each cities}}
+    <tr>
+        <th>{{name}}</th>
+         <th>{{state}}</th>
+          <th>{{population}}</th>
+    </tr>
+   {{/each}}
+</table>
