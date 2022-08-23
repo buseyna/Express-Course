@@ -65,9 +65,7 @@ router.post('/actor', function(req,res, next){
   /* Check if the actor already exist */
   const selectActor = `SELECT * FROM actor WHERE first_name = '${newActor.first_name}' AND last_name = '${newActor.last_name}'`;
    connection.query(selectActor, function(err, result){
-    if (err){
-      console.log(err.message);
-    } else{
+
       if(result.length >0) {
         res.send('Sorry, that actor already exists.');
       } else{
@@ -81,7 +79,7 @@ router.post('/actor', function(req,res, next){
           }
          })
       }
-    }
-   })
-})
+    });
+  });
+
 module.exports = router;
