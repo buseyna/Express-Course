@@ -1,0 +1,14 @@
+npm install -g sequelize
+npm install -g sequelize-cli
+npm install -g mysql2
+npm install -g mysql
+sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string,password:string,isActive:boolean
+
+depends on what i want to create
+sequelize-cli model:generate --name post --attributes title:string,des:string,author:string,:string,img:string
+
+
+sequelize db:migrate:undo:all
+sequelize db:migrate
+npm install -g sequelize-aouto-migrarions
+sequelize init
